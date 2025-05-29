@@ -1,0 +1,22 @@
+name: Release Please
+
+permissions:
+  contents: write
+  pull-requests: write
+  id-token: write
+  issues: write
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Release Please
+        id: release
+        uses: googleapis/release-please-action@v4
+        with:
+          token: ${{secrets.GITHUB_TOKEN}}

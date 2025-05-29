@@ -85,17 +85,10 @@ Couche **d'infrastructure** : elle implémente les interfaces de la couche `doma
 
 ```
 /src
-├── domain
-│ ├── model
-│ ├── repository
-│ └── usecase
-├── data
-│ ├── datasource
-│ └── repository
-└── presentation
-├── controller
-├── state
-└── view
+├───core
+├───data
+├───domain
+└───presentation
 ```
 
 

@@ -28,7 +28,7 @@ public class TodoPage extends JFrame implements View{
 
 
     private void configureTable() {
-        String[] columnNames = {"Tâches", "Actions"};                                            // Initialisation des titres de colonnes (dans un tableau)
+        String[] columnNames = {"Tâches", "Types"};                                      // Initialisation des titres de colonnes (dans un tableau)
         DefaultTableModel customTableModel = new DefaultTableModel(columnNames,0);      // Création d'un modèle pour structure le tableau
         todoTable.setModel(customTableModel);
 

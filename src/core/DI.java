@@ -17,15 +17,15 @@ public class DI {
     private static AddTodoUseCase addUseCase;
     private static DeleteTodoUseCase deleteUseCase;
     private static GetTodosUseCase getUseCase;
-    private static TodoController todoCubit;
+    private static TodoController todoController;
 
     // Getter statiques pour les composants
 
     public static TodoController getTodoController() {
-        if (todoCubit == null) {
-            todoCubit = new TodoController(getTodosUseCase(), getAddTodoUseCase(), getDeleteTodoUseCase());
+        if (todoController == null) {
+            todoController = new TodoController(getTodosUseCase(), getAddTodoUseCase(), getDeleteTodoUseCase());
         }
-        return todoCubit;
+        return todoController;
     }
 
     public static AddTodoUseCase getAddTodoUseCase() {

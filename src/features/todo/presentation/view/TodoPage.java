@@ -1,5 +1,7 @@
 package features.todo.presentation.view;
 
+import features.todo.presentation.controller.TodoController;
+
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 
@@ -10,9 +12,11 @@ public class TodoPage extends JFrame implements View{
     private JButton deleteTodoButton;
     private JTable todoTable;
     private JScrollPane todoScrollPane;
+    private TodoController todoController;
 
-    public TodoPage() {
+    public TodoPage(TodoController todoController) {
         super("Liste de todos");                          // Permet de donner un titre à la fenêtre
+        this.todoController = todoController;
         configureComponent();
         configureTable();
         configureFrame();
@@ -45,6 +49,7 @@ public class TodoPage extends JFrame implements View{
 
     @Override
     public void run() {
+        todoController.loadTodos();
         setVisible(true);                                      // Rend la fenêtre visible à l'écran
     }
 

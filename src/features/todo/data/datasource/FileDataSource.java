@@ -1,11 +1,10 @@
 package features.todo.data.datasource;
 
-
-
 import features.todo.data.model.TodoItemModel;
 
 import java.io.*;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class FileDataSource {
     private final File file;
